@@ -65,8 +65,8 @@ jobs:
           for REPO in ${{ env.REPOS }}
           do
             echo "Cloning $REPO"
-            # git clone https://github.com/dell/$REPO.git $REPO
-            git clone https://github.com/$REPO.git $REPO
+            git clone https://github.com/dell/$REPO.git $REPO
+            # git clone https://github.com/$REPO.git $REPO
             cd $REPO
 
             echo "Copying actions-template to $REPO"
