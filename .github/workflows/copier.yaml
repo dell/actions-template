@@ -43,7 +43,7 @@ jobs:
           # echo ${{ inputs.config }}
           # curl -o repositories.txt "https://raw.githubusercontent.com/dell/actions-template/main/.github/configs/${{ inputs.config }}"
           # REPOS=$(cat repositories.txt)
-          REPOS=$(cat ${{ inputs.config }})
+          REPOS=$(cat .github/configs/${{ inputs.config }})
           echo "REPOS=$REPOS" >> $GITHUB_ENV
 
       - name: Install copier
