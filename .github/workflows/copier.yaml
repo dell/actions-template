@@ -25,6 +25,8 @@ on:  # yamllint disable-line rule:truthy
 
 env:
   BRANCH_NAME: "add-dell-actions"
+  # Need for GitHub CLI commands
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   copy-templates:
