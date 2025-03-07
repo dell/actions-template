@@ -79,7 +79,7 @@ jobs:
             copier copy ../actions-template . --overwrite
 
             git add .
-            git restore --staged .github/workflows/copier.yaml .github/configs LICENSE README.md
+            git restore --staged .github/configs LICENSE README.md
             git commit -S -m "Copy actions-template"
             git push origin ${{ env.BRANCH_NAME }}
 
