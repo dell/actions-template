@@ -15,7 +15,12 @@ on:  # yamllint disable-line rule:truthy
       config:
         description: "List of repositories"
         required: true
-        type: string
+        type: choice
+        options:
+          - all-csm-repos.txt
+          - csm-drivers-modules.txt
+          - golibs.txt
+          - test.txt
         default: "all-csm-repos.txt"
 
 env:
