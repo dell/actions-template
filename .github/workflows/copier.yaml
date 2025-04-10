@@ -83,6 +83,7 @@ jobs:
             echo "Cloning $REPO"
             git clone https://github.com/dell/$REPO.git $REPO
             cd $REPO
+            git checkout -b ${{ env.BRANCH_NAME }}
 
             echo "Copying actions-template to $REPO"
             copier copy ../actions-template . --overwrite
