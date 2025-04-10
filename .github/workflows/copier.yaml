@@ -91,7 +91,7 @@ jobs:
 
             git add .
             git restore --staged .github/configs LICENSE README.md
-            git commit -S -m "Copy actions-template"
+            git commit -m "Copy actions-template"
             git push origin ${{ env.BRANCH_NAME }}
 
             # Create PR
