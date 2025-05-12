@@ -82,7 +82,7 @@ jobs:
           for REPO in ${{ env.REPOS }}
           do
             echo "Cloning $REPO"
-            git clone https://github.com/dell/$REPO.git $REPO
+            git clone https://${{ secrets.CSMBOT_PAT }}@github.com/dell/$REPO.git $REPO
             cd $REPO
             git checkout -b ${{ env.BRANCH_NAME }}
 
